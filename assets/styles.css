@@ -99,3 +99,110 @@
         white-space: nowrap;
     }
 }
+
+
+/* ===== FINAL SMALL PORTRAIT ===== */
+
+.hero-grid {
+    min-height: 500px !important;
+    grid-template-columns: 1.5fr .5fr !important;
+    gap: 60px !important;
+    align-items: center !important;
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+}
+
+.hero h1 {
+    font-size: clamp(3.5rem, 5vw, 5rem) !important;
+    line-height: .92 !important;
+}
+
+.portrait-column {
+    align-self: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.portrait-frame {
+    width: 200px !important;
+    margin: 0 auto !important;
+}
+
+.portrait-frame::before {
+    inset: 10px -10px -10px 10px !important;
+    border-radius: 16px !important;
+}
+
+.portrait-frame img {
+    width: 200px !important;
+    height: 240px !important;
+    aspect-ratio: auto !important;
+    object-fit: cover !important;
+    object-position: center 18% !important;
+    border-radius: 16px !important;
+}
+
+.portrait-label {
+    left: 50% !important;
+    bottom: -14px !important;
+    transform: translateX(-50%) !important;
+    white-space: nowrap !important;
+    font-size: .62rem !important;
+    padding: 7px 10px !important;
+}
+
+.credential-strip {
+    width: 250px !important;
+    margin-top: 32px !important;
+}
+
+.credential-strip div {
+    padding: 8px 5px !important;
+}
+
+.credential-strip strong {
+    font-size: .85rem !important;
+}
+
+.credential-strip span {
+    font-size: .55rem !important;
+}
+
+@media (max-width: 800px) {
+    .hero-grid {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+        gap: 36px !important;
+        padding-top: 45px !important;
+        padding-bottom: 45px !important;
+    }
+
+    .hero-copy {
+        text-align: center !important;
+    }
+
+    .eyebrow,
+    .hero-actions,
+    .hero-links {
+        justify-content: center !important;
+    }
+
+    .hero-intro {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .portrait-frame {
+        width: 180px !important;
+    }
+
+    .portrait-frame img {
+        width: 180px !important;
+        height: 215px !important;
+    }
+
+    .credential-strip {
+        width: min(250px, 100%) !important;
+    }
+}
