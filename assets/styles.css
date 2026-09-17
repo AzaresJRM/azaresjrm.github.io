@@ -206,3 +206,49 @@
         width: min(250px, 100%) !important;
     }
 }
+
+
+/* ===== FIX TRACKIT SCREENSHOTS ===== */
+
+.project-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.project-gallery figure {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.project-gallery img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    border-radius: 10px;
+}
+
+/* Main TrackIT preview */
+.project-visual {
+    min-height: auto !important;
+    display: flex;
+    align-items: center;
+    background: #f3f6fa;
+}
+
+.project-visual > img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+}
