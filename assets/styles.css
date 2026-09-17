@@ -13,3 +13,89 @@
 @media(max-width:1020px){.site-header nav{gap:15px}.site-header nav a{font-size:.69rem}.hero-grid{grid-template-columns:1fr .75fr;gap:35px}.hero h1{font-size:clamp(3.7rem,8vw,5.2rem)}.skill-grid{grid-template-columns:repeat(2,1fr)}.project-showcase{grid-template-columns:1fr}.project-visual{min-height:480px}.case-study{grid-template-columns:1fr 1fr}.sample-grid{grid-template-columns:repeat(3,1fr)}.featured-training{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){:root{--shell:min(100% - 28px,1180px)}.nav-wrap{height:68px}.brand-copy small{display:none}.nav-toggle{display:block;z-index:3}.site-header nav{position:fixed;inset:68px 0 auto;background:white;border-bottom:1px solid var(--line);display:grid;gap:0;transform:translateY(-130%);transition:transform .25s;padding:10px 24px 24px;box-shadow:var(--shadow)}.site-header nav.open{transform:none}.site-header nav a{padding:10px 0;font-size:.78rem}.hero{padding-top:68px}.hero-grid{grid-template-columns:1fr;gap:50px;min-height:auto;padding-block:60px}.hero h1{font-size:clamp(3.7rem,18vw,5.6rem)}.portrait-column{width:85%;margin:auto}.portrait-label{left:-15px}.hero-ribbon{justify-content:flex-start}.section{padding:80px 0}.two-column,.contact-grid{grid-template-columns:1fr;gap:38px}.section-heading.split{display:block}.section-heading.split>p{margin-top:20px}.timeline:before{left:20px}.timeline-item{grid-template-columns:45px 1fr}.timeline-date{grid-column:2;padding:0 0 5px;text-align:left}.timeline-marker{grid-column:1;grid-row:1/3;width:34px;height:34px;margin-top:0}.timeline-card{grid-column:2;padding:23px}.skill-grid{grid-template-columns:1fr}.skill-card{min-height:auto}.project-summary{padding:35px 26px}.project-summary h3{font-size:3.2rem}.case-study,.stack-and-quality,.project-gallery{grid-template-columns:1fr}.sample-grid{grid-template-columns:1fr 1fr}.featured-training{grid-template-columns:1fr 1fr}.resume-panel{grid-template-columns:1fr;gap:20px;padding:32px}.resume-panel h2{font-size:2rem}footer .page-shell{display:grid;text-align:center;justify-content:center}.contact-grid{gap:45px}}
 @media(max-width:500px){.hero-actions .button{width:100%}.portrait-column{width:100%}.credential-strip{grid-template-columns:1fr 1fr}.credential-strip div:last-child{grid-column:1/3}.sample-grid,.featured-training{grid-template-columns:1fr}.training-lists li{display:grid;gap:4px}.training-lists li span{text-align:left}.contact-item{grid-template-columns:1fr}.contact-item>span{grid-row:auto}.stack-groups{grid-template-columns:1fr}.project-visual{min-height:360px}.visual-caption{left:10px;right:10px;bottom:10px}}
+
+/* ===== HERO POLISH OVERRIDE ===== */
+
+.hero-grid {
+    min-height: 610px;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 70px;
+    align-items: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.hero h1 {
+    font-size: clamp(3.7rem, 6vw, 5.6rem);
+    line-height: .9;
+}
+
+.portrait-column {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portrait-frame {
+    width: min(100%, 320px);
+    margin: 0 auto;
+}
+
+.portrait-frame:before {
+    inset: 16px -16px -16px 16px;
+    border-radius: 20px;
+}
+
+.portrait-frame img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 20px;
+}
+
+.portrait-label {
+    left: -20px;
+    bottom: 18px;
+}
+
+.credential-strip {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 30px;
+}
+
+@media (max-width: 800px) {
+    .hero-grid {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding-top: 70px;
+    }
+
+    .hero-copy {
+        text-align: center;
+    }
+
+    .eyebrow,
+    .hero-actions,
+    .hero-links {
+        justify-content: center;
+    }
+
+    .hero-intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portrait-frame {
+        width: min(78vw, 290px);
+    }
+
+    .portrait-label {
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+}
